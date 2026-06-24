@@ -1,0 +1,426 @@
+/* stats sections */
+
+.main-stat {
+    background: var(--primary-dark-bg);
+    padding: var(--spacing-s);
+}
+
+.stat-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: var(--spacing-m);
+}
+
+.stat-item svg {
+    width: 32px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-light);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-align: center;
+}
+
+.stat-item-title {
+    font-weight: 600;
+    font-size: var(--font-size-s);
+}
+
+.stat-item-desc {
+    font-size: 12px;
+}
+
+/* available rides section */
+
+.main-rides {
+    padding: var(--spacing-s);
+}
+
+.rides-wrap span {
+    font-size: var(--font-size-m-mob);
+    font-weight: 600;
+}
+
+.ride-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+    margin-top: var(--spacing-m);
+    background: transparent;
+}
+
+.ride-card-slide {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.ride-card-slide::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 90%;
+    width: 100%;
+    position: relative;
+}
+
+.tag {
+    padding: var(--spacing-xs) var(--spacing-s);
+    background: var(--primary-dark-bg);
+    position: absolute;
+    color: var(--text-light);
+    font-size: var(--font-size-xs);
+    border-radius: 50px;
+    top: 16px;
+    right: 16px;
+}
+
+.card-size {
+    height: 20vh;
+}
+
+.card-img-left {
+    background: url("../images/card-innova.webp") no-repeat center;
+    background-size: 100% auto;
+    transition: all .5s ease-in-out;
+}
+
+.card-img-right {
+    background: url("../images/card-vios.webp") no-repeat center;
+    background-size: 100% auto;
+    transition: all .5s ease-in-out;
+}
+
+.card-content {
+    padding: var(--spacing-s);
+    background: var(--secondary-light-bg);
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.card-btn{
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: var(--button-size);
+    text-align: center;
+    border: 1px solid var(--primary-dark-bg);
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.car-model {
+    font-size: var(--font-size-s) !important;
+}
+
+.card-text > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text > div >span {
+    font-size: var(--font-size-s) !important;
+    font-weight: 400 !important;
+}
+
+/* how it works section */
+
+.main-how {
+    padding: var(--spacing-s);
+}
+
+.how-wrap {
+    display: flex;
+    gap: var(--spacing-m);
+}
+
+.how-left-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    flex: 1;
+}
+
+.how-left-content span {
+    font-size: var(--font-size-m-mob);
+    font-weight: 600;
+}
+
+.how-right-content {
+    display: none;
+}
+
+.how-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.how-body-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.how-body-item p:first-child {
+    font-weight: 500;
+}
+
+.how-btn {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: var(--spacing-s) 0;
+    background: var(--button-primary-3);
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* testimonials section */
+
+.main-test {
+    padding: var(--spacing-s);
+    margin-top: var(--spacing-s);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-dark-bg);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-s);
+}
+
+.control {
+    display: none;
+}
+
+.btn-control {
+    background: none;
+    border: none;
+    padding: var(--spacing-xs);
+    cursor: pointer;
+}
+
+.slider {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-pp {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+}
+
+.pp-1 {
+    background: url("../images/profile/profile-1.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-2 {
+    background: url("../images/profile/profile-2.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-3 {
+    background: url("../images/profile/profile-3.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-4 {
+    background: url("../images/profile/profile-4.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-5 {
+    background: url("../images/profile/profile-5.webp") no-repeat;
+    background-size: cover;
+}
+
+.head-left {
+    display: flex;
+    gap: var(--spacing-s);
+    align-items: center;
+    margin-bottom: var(--spacing-m);
+}
+
+.client-det {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.test-card {
+    width: 900px;
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    margin-left: var(--spacing-l);
+}
+
+.card-body p {
+    line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* stat section */
+
+    .stat-item svg {
+        width: 48px;
+    }
+
+    .stat-item-title {
+        font-size: var(--font-size-m-mob);
+    }
+
+    /* available rides */
+
+    .ride-card-slide {
+        width: 100%;
+        display: flex;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        scrollbar-width: none;
+    }
+
+    .card {
+        flex: 1;
+        box-shadow: 0 24px 32px rgba(0, 0, 0, .15);
+    }
+
+    /* how works section */
+
+    .how-btn {
+        max-width: 235px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-hero {
+        background: url("../images/hero-home-image.webp") no-repeat right;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    /* header and navigation */
+
+    .menu-list.active a {
+        color: var(--text-highlight);
+        font-weight: 600;
+    }
+
+    /* stats section */
+
+    .stat-item-title {
+        font-size: var(--font-size-l);
+        font-weight: 800;
+    }
+
+    .stat-item svg {
+        width: 64px;
+    }
+
+    .stat-item-desc {
+        font: var(--font-size-s);
+    }
+
+    /* available rides section */
+
+    .card-size {
+        height: 20vh;
+    }
+
+    /* how it works sections */
+
+    .how-right-content {
+        display: inherit;
+        background: url("../images/how-img.webp") no-repeat center;
+        width: 60%;
+    }
+
+    /* testimonial section */
+
+    .control {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* available rides section */
+
+    .rides-wrap span {
+        font-size: var(--font-size-m-web);
+    }
+
+    .card-size {
+        height: 40vh;
+    }
+
+    /* how it works */
+
+    .how-left-content span {
+        font-size: var(--font-size-m-web);
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+    /* available rides section */
+
+    .card-size {
+        height: 30vh;
+    }
+
+    .tag {
+        font-size: var(--font-size-s);
+    }
+
+    .card:hover .card-img-left, .card:hover .card-img-right {
+        background-size: calc(100% + var(--spacing-l));
+    }
+
+}

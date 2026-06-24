@@ -1,0 +1,366 @@
+/* rates section */
+
+.main-rates {
+    padding: var(--spacing-s);
+}
+
+.rate-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+    margin-top: var(--spacing-m);
+    background: transparent;
+}
+
+.rate-card-slide {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.rate-card-slide::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 90%;
+    width: 100%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.rates-wrap span:first-of-type {
+    font-size: var(--font-size-m-mob);
+    font-weight: 600;
+}
+
+.rate-card-text span:first-child {
+    font-size: var(--font-size-s);
+}
+
+.card-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-head-veh-type {
+    font-weight: 600;
+}
+
+.card-head-veh-model {
+    font-size: 14px;
+}
+
+.veh-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.veh-desc span:first-child {
+    font-weight: 600;
+    font-size: var(--font-size-s);
+}
+
+.veh-rate-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.rate-card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-size {
+    height: 20vh;
+}
+
+.card-img-left {
+    background: url("../images/card-innova.webp") no-repeat center;
+    background-size: 100% auto;
+    transition: all .5s ease-in-out;
+}
+
+.card-img-right {
+    background: url("../images/card-vios.webp") no-repeat center;
+    background-size: 100% auto;
+    transition: all .5s ease-in-out;
+}
+
+.card-content {
+    padding: var(--spacing-s);
+    background: var(--secondary-light-bg);
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.card-btn{
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: var(--button-size);
+    text-align: center;
+    background: var(--button-primary-3);
+    font-weight: 400;
+}
+
+.car-model {
+    font-size: var(--font-size-s) !important;
+}
+
+/* destinations */
+
+.main-destinations {
+    padding: var(--spacing-s);
+}
+
+.destination-wrap span:first-child {
+    font-size: var(--font-size-m-mob);
+    font-weight: 600;
+}
+
+.destination-cards {
+    display: flex;
+    width: 100%;
+    gap: var(--spacing-m);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-top: var(--spacing-m);
+}
+
+.img-card {
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    height: 512px;
+    flex: 0 0 80%;
+    position: relative;
+}
+
+.img-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    mask-image: linear-gradient(to top,
+  black 0%,
+  black 40%,
+  rgba(0,0,0,0.1) 100%,
+  transparent 100%);
+}
+
+.img-card span {
+    font-size: var(--font-size-m-web) !important;
+    z-index: 10;
+}
+
+.img-card-1, .img-card-2, .img-card-3, .img-card-4 {
+    color: var(--text-light);
+    padding: var(--spacing-l);
+    font-size: var(--font-size-m-web);
+    font-weight: 600;
+
+    font-size: var(--font-size-l);
+}
+
+.img-card-1 {
+    background: url("../images/destination/dest-img-1.jpeg") no-repeat;
+    background-size: cover;
+}
+
+.img-card-2 {
+    background: url("../images/destination/dest-img-2.jpeg") no-repeat;
+    background-size: cover;
+}
+
+.img-card-3 {
+    background: url("../images/destination/dest-img-3.jpeg") no-repeat;
+    background-size: cover;
+}
+
+.img-card-4 {
+    background: url("../images/destination/dest-img-4.jpeg") no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* hero section */
+
+    .sec-btn {
+        max-width: 30%;
+    }
+
+    .sec-btn {
+        max-width: 50%;
+    }
+
+      /* available rides */
+
+    .rate-card-slide {
+        width: 100%;
+        display: flex;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        scrollbar-width: none;
+    }
+
+    .card {
+        flex: 1;
+        box-shadow: 0 24px 32px rgba(0, 0, 0, .15);
+    }
+
+    /* how works section */
+
+    .how-btn {
+        max-width: 235px;
+        margin: 0 auto;
+    }
+
+    /* destination */
+
+    .img-card {
+        flex: 0 0 40%;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    /* hero section */
+
+    .main-hero {
+        background: url("../images/hero-rates-image.webp") no-repeat right;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* header and navigation */
+
+    .menu-list.active a {
+        color: var(--text-highlight);
+        font-weight: 600;
+    }
+
+    .sec-btn {
+        max-width: 50%;
+    }
+
+    /* available rides section */
+
+    .card-size {
+        height: 20vh;
+    }
+
+    .card-head-veh-model {
+        font-size: var(--font-size-s) !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* hero section */
+
+    .sec-btn {
+        max-width: 40% !important;
+    }
+
+    /* rate section */
+
+    .veh-rate-cta {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card-btn {
+        height: fit-content;
+        align-self: flex-end;
+        width: 40%;
+    }
+
+    .rates-wrap span:first-of-type {
+        font-size: var(--font-size-m-web);
+    }
+
+    .card-head-veh-type {
+        font-size: var(--font-size-m-mob) !important;
+    }
+
+    .veh-desc span:first-child {
+        font-size: var(--font-size-s) !important;
+    }
+
+    .rate-card-text span:first-child {
+        font-size: var(--font-size-s) !important;
+    }
+
+    /* destinations */
+
+    .destination-cards {
+        display: flex;
+        width: 100%;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        scrollbar-width: none;
+    }
+
+    .destination-wrap span:first-of-type {
+        font-size: var(--font-size-m-web);
+    }
+
+    .img-card {
+        flex: 1;
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+    /* destinations */
+
+    .img-card {
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .main-hero {
+        background-size: auto 80% !important;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+     /* available rides section */
+
+    .card-size {
+        height: 30vh;
+    }
+
+    .tag {
+        font-size: var(--font-size-s);
+    }
+
+    .card:hover .card-img-left, .card:hover .card-img-right {
+        background-size: calc(100% + var(--spacing-l));
+    }
+}
+
