@@ -24,15 +24,18 @@
     align-items: center;
     gap: var(--spacing-xs);
     text-align: center;
+    width: 25%;
 }
 
 .stat-item-title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: var(--font-size-s);
 }
 
 .stat-item-desc {
     font-size: 12px;
+    display: block;
+    word-break: break-word;
 }
 
 /* available rides section */
