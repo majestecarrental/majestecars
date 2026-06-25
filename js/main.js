@@ -18,6 +18,33 @@ window.addEventListener('scroll', handleScroll);
 handleScroll();
 
 
+const faqBoxes = document.querySelectorAll(".faq-content-box");
+
+faqBoxes.forEach(box => {
+    box.classList.remove("show");
+    const head = box.querySelector(".faq-content-head");
+    const content = box.querySelector(".faq-content");
+     content.style.maxHeight = null;
+
+    head.addEventListener("click", () => {
+
+        const isOpen = box.classList.contains("show");
+
+        // Close all
+        faqBoxes.forEach(item => {
+            item.classList.remove("show");
+            item.querySelector(".faq-content").style.maxHeight = null;
+        });
+
+        // Open clicked item if it wasn't already open
+        if (!isOpen) {
+            box.classList.add("show");
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+
+
 // const faqBoxes = document.querySelectorAll(".faq-content-box");
 
 // faqBoxes.forEach(box => {
@@ -28,52 +55,58 @@ handleScroll();
 //     });
 // });
 
-const faqBoxes = document.querySelectorAll(".faq-content-box");
 
-// open first by default
-faqBoxes.forEach((box, index) => {
-    const content = box.querySelector(".faq-content");
 
-    if (index === 0) {
-        box.classList.add("show");
 
-        // wait for layout to settle
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                content.style.maxHeight = content.scrollHeight + "px";
-            });
-        });
+// ==========
+// option to show box content on first load below
 
-    } else {
-        box.classList.remove("show");
-        content.style.maxHeight = null;
-    }
-});
+// const faqBoxes = document.querySelectorAll(".faq-content-box");
 
-faqBoxes.forEach(box => {
-    const head = box.querySelector(".faq-content-head");
-    const content = box.querySelector(".faq-content");
+// // open first by default
+// faqBoxes.forEach((box, index) => {
+//     const content = box.querySelector(".faq-content");
 
-    head.addEventListener("click", () => {
+//     if (index === 0) {
+//         box.classList.add("show");
 
-        const wasOpen = box.classList.contains("show");
+//         // wait for layout to settle
+//         requestAnimationFrame(() => {
+//             requestAnimationFrame(() => {
+//                 content.style.maxHeight = content.scrollHeight + "px";
+//             });
+//         });
 
-        const before = head.getBoundingClientRect().top;
+//     } else {
+//         box.classList.remove("show");
+//         content.style.maxHeight = null;
+//     }
+// });
 
-        faqBoxes.forEach(b => {
-            b.classList.remove("show");
-            b.querySelector(".faq-content").style.maxHeight = null;
-        });
+// faqBoxes.forEach(box => {
+//     const head = box.querySelector(".faq-content-head");
+//     const content = box.querySelector(".faq-content");
 
-        if (!wasOpen) {
-            box.classList.add("show");
+//     head.addEventListener("click", () => {
 
-            requestAnimationFrame(() => {
-                content.style.maxHeight = content.scrollHeight + "px";
+//         const wasOpen = box.classList.contains("show");
 
-                const after = head.getBoundingClientRect().top;
-                window.scrollBy(0, after - before);
-            });
-        }
-    });
-});
+//         const before = head.getBoundingClientRect().top;
+
+//         faqBoxes.forEach(b => {
+//             b.classList.remove("show");
+//             b.querySelector(".faq-content").style.maxHeight = null;
+//         });
+
+//         if (!wasOpen) {
+//             box.classList.add("show");
+
+//             requestAnimationFrame(() => {
+//                 content.style.maxHeight = content.scrollHeight + "px";
+
+//                 const after = head.getBoundingClientRect().top;
+//                 window.scrollBy(0, after - before);
+//             });
+//         }
+//     });
+// });
