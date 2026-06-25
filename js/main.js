@@ -36,7 +36,14 @@ faqBoxes.forEach((box, index) => {
 
     if (index === 0) {
         box.classList.add("show");
-        content.style.maxHeight = content.scrollHeight + "px";
+
+        // wait for layout to settle
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                content.style.maxHeight = content.scrollHeight + "px";
+            });
+        });
+
     } else {
         box.classList.remove("show");
         content.style.maxHeight = null;
@@ -51,10 +58,8 @@ faqBoxes.forEach(box => {
 
         const wasOpen = box.classList.contains("show");
 
-        // remember scroll position before DOM change
         const before = head.getBoundingClientRect().top;
 
-        // close all
         faqBoxes.forEach(b => {
             b.classList.remove("show");
             b.querySelector(".faq-content").style.maxHeight = null;
@@ -66,7 +71,6 @@ faqBoxes.forEach(box => {
             requestAnimationFrame(() => {
                 content.style.maxHeight = content.scrollHeight + "px";
 
-                // fix viewport shift
                 const after = head.getBoundingClientRect().top;
                 window.scrollBy(0, after - before);
             });
